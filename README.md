@@ -4,8 +4,8 @@ You need to deploy the packaged war to a weblogic server which has a version gre
 The application has not been designed like a spring boot, run as java application.
 
 
-```SAMPLE LOG
-Connected to server
+
+```````````````````Connected to server
 [2016-11-27 03:24:48,856] Artifact spring-boot-primefaces-weblogic:war exploded: Artifact is being deployed, please wait...
 2016-11-27 03:24:50 JRebel: Directory 'C:\apps\mygithub\spring-boot-primefaces-weblogic\target\classes' will be monitored for changes.
 2016-11-27 03:24:50 JRebel: Directory 'C:\apps\mygithub\spring-boot-primefaces-weblogic\src\main\webapp' will be monitored for changes.
@@ -70,6 +70,4 @@ SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorSta
 [2016-11-27 03:25:13,430] Artifact spring-boot-primefaces-weblogic:war exploded: Artifact is deployed successfully
 [2016-11-27 03:25:13,430] Artifact spring-boot-primefaces-weblogic:war exploded: Deploy took 24.574 milliseconds
 <27-Nov-2016 03:25:32 o'clock EET> <Warning> <javax.faces> <warning.component.uiviewroot_non_serializable_attribute_viewmap> <Setting non-serializable attribute value into ViewMap: (key: basicsBean, value class: com.cgonul.poc.beans.basics.BasicsBean)> 
-```
-
-...
+```````````````````
