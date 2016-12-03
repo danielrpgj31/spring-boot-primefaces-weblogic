@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Component("dateBean")
@@ -27,7 +28,8 @@ public class DateBean {
 
     public String getSampleDay(){
         if(standardDate != null){
-            return String.format("You choose '%s'.",standardDate.toString());
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            return String.format("You choose '%s'.",formatter.format(standardDate));
         }
         return "No date selected.";
     }

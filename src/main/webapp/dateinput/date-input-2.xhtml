@@ -9,28 +9,16 @@
 <h:body>
     <h1 class="ui-widget-header ui-corner-all" align="center">Date Input</h1>
     <br/>
-    <p:fieldset>
-        <h:form>
-            <h2>Register for the JSF Resort</h2>
-            <p:messages/>
-            <b>Start date:</b>
-            <p:calendar value="#{dateBean.startDate}" required="true" requiredMessage="Start date required"/>
-            <br/>
-            <b>End date:</b>
-            <p:calendar value="#{dateBean.endDate}" required="true" requiredMessage="End date required"/>
-            <br/>
-            <p:commandButton action="#{dateBean.register}" ajax="false" value="Register"/><p/>
-            <br/>
-            <hr/>
-
+    <h:form>
+        <p:fieldset>
             <p:panelGrid columns="2">
-                <p:calendar value="#{dateBean.standardDate}" pattern="dd:MM.yyyy hh:mm">
+                <p:calendar value="#{dateBean.standardDate}" pattern="dd:MM.yyyy hh:mm:ss">
                     <p:ajax event="dateSelect" update="selection" process="@this"/>
                 </p:calendar>
                 <h:outputText value="#{dateBean.sampleDay}" id="selection"/>
             </p:panelGrid>
+        </p:fieldset>
+    </h:form>
 
-        </h:form>
-    </p:fieldset>
 </h:body>
 </html>
