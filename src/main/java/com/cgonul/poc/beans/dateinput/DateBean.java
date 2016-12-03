@@ -1,4 +1,4 @@
-package com.cgonul.poc.dateinput;
+package com.cgonul.poc.beans.dateinput;
 
 
 import org.springframework.context.annotation.Scope;
