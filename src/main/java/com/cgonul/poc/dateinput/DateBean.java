@@ -13,6 +13,7 @@ import java.util.Date;
 public class DateBean {
     private Date startDate;
     private Date endDate;
+    private Date standardDate;
 
     public void register() {
         FacesContext context = FacesContext.getCurrentInstance();
@@ -22,6 +23,13 @@ public class DateBean {
             errorMessage.setSeverity(FacesMessage.SEVERITY_ERROR);
             context.addMessage(null, errorMessage);
         }
+    }
+
+    public String getSampleDay(){
+        if(standardDate != null){
+            return String.format("You choose '%s'.",standardDate.toString());
+        }
+        return "No date selected.";
     }
 
     public Date getStartDate() {
@@ -38,5 +46,13 @@ public class DateBean {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public Date getStandardDate() {
+        return standardDate;
+    }
+
+    public void setStandardDate(Date standardDate) {
+        this.standardDate = standardDate;
     }
 }

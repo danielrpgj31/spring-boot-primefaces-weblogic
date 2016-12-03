@@ -14,12 +14,19 @@
             <h2>Register for the JSF Resort</h2>
             <p:messages/>
             <b>Start date:</b>
-            <p:calendar value="#{dateBean.startDate}" required="true" requiredMessage="Start date required"></p:calendar>
+            <p:calendar value="#{dateBean.startDate}" required="true" requiredMessage="Start date required"/>
             <br/>
             <b>End date:</b>
             <p:calendar value="#{dateBean.endDate}" required="true" requiredMessage="End date required"/>
             <br/>
             <p:commandButton action="#{dateBean.register}" ajax="false" value="Register"/><p/>
+            <br/>
+            <hr/>
+            <p:calendar value="#{dateBean.standardDate}" mode="inline">
+                <p:ajax event="dateSelect" update="selection" process="@this"/>
+            </p:calendar>
+            <br/>
+            <h:outputText value="#{dateBean.sampleDay}" id="selection"/>
         </h:form>
     </p:fieldset>
 </h:body>
