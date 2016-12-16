@@ -41,4 +41,8 @@ public class LazyView {
         FacesMessage msg = new FacesMessage("Car Selected", ((Car) event.getObject()).getId());
         FacesContext.getCurrentInstance().addMessage(null, msg);
     }
+
+    public void editRow(Car carToBeEdited){
+        carToBeEdited.setBrand("Edited");
+    }
 }
